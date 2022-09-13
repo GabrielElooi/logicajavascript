@@ -1,6 +1,9 @@
-import { Component, Vue } from 'vue-property-decorator';
-
+import { Component, Prop, Vue } from 'vue-property-decorator';
+ 
 @Component
 export default class ClsExibirNome extends Vue {
-private nome: string = "Fleek Cursos"
+    @Prop({
+        default: "Nome Padrão"
+    })
+    public nome: string | undefined
 }

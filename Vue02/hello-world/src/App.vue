@@ -1,18 +1,11 @@
 <template>
   <div id="app">
     <p>Aplicação aula</p>
-    <exibir-nome> </exibir-nome>
+    <exibir-nome v-for="(cliente,chave) in rsClientes" :nome="cliente.nome" v-if="chave == 2"></exibir-nome>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-
-import ExibirNome from './components/ExibirNome.vue';
-
-@Component({
-  components: {
-    ExibirNome
-  }
-})
-export default class App extends Vue { }
+import AppCls from './AppCls'
+export default AppCls
+</script>

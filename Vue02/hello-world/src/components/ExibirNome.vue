@@ -1,6 +1,6 @@
 <template>
     <div>
-      Nome a ser exibido...vai aqui
+     O nome é: {{ nome }}
     </div>
 </template>
 
